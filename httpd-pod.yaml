@@ -11,7 +11,7 @@ spec:
       location: IN
       environment: Production
       tier: frontend
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       name: httpd-pod
