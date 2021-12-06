@@ -20,13 +20,13 @@ spec:
   # template's labels.
   selector:
     matchLabels:
-      app: httpd-web
+      app: httpd-rollout
 
   # Template describes the pods that will be created. Same as deployment
   template:
     spec:
       containers:
-      - name: httpd-web
+      - name: httpd-pod
         image: argoproj/rollouts-demo:blue
 
   # Minimum number of seconds for which a newly created pod should be ready
@@ -318,7 +318,7 @@ spec:
           trafficSplitName: rollout-example-traffic-split # optional
 
       # Add a delay in second before scaling down the canary pods when update
-      # is aborted for canary strategy with traffic routing (not applicable for basic canary).
+      # is aborted for canary strategy with traffic routing (not licable for basic canary).
       # 0 means canary pods are not scaled down. Default is 30 seconds.
       abortScaleDownDelaySeconds: 30
 
