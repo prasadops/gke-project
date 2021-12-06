@@ -20,7 +20,7 @@ spec:
   # template's labels.
   selector:
     matchLabels:
-      app: httpd-rollout
+      app: httpd-pod
 
   # Template describes the pods that will be created. Same as deployment
   template:
